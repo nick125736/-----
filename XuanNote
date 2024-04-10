@@ -1,0 +1,34 @@
+A透過搜索關鍵詞，"流行歌曲" 並設置100首
+
+------------------------------
+B獲取每個視頻的詳細信息，提取音頻 URL，將音樂 URL 寫入文件audioUrls.txt
+
+------------------------------
+C不能用LIBROSA 因為她只能分析本地端資料 若要使用它需要將大量影片下載至本地端
+嘗試使用youtube_dl
+
+------------------------------
+A這裡設置為搜索關鍵詞，流行歌曲 100首 但好像只能到50
+
+------------------------------
+若要分析音樂必須下載至本地端
+若不下載只能直接從yt api抓區資訊使用
+yt api可以抓取到
+
+透過YouTube API，你可以獲取到的音樂相關的元數據包括：
+
+影片標題（Title）：音樂影片的標題。                            items.snippet.title
+發佈日期（Published At）：音樂影片的發佈日期。                   items.snippet.publishedAt
+描述（Description）：音樂影片的描述。                           items.snippet.description
+標籤（Tags）：與音樂影片相關的標籤。                            items.snippet.tags   (陣列)
+評論數（Comment Count）：音樂影片的評論數。                     items.statistics.commentCount
+喜歡數（Like Count）：音樂影片的喜歡數。                           items.statistics.likeCount
+不喜歡數（Dislike Count）：音樂影片的不喜歡數。
+觀看次數（View Count）：音樂影片的觀看次數。                           items.statistics.viewCount
+音頻資訊（Audio Information）：音樂影片的音頻資訊，例如音訊格式、音訊位元率等。
+視頻資訊（Video Information）：音樂影片的視頻資訊，例如視訊格式、視訊位元率等。
+
+------------------------------
+嘗試將C改為，抓取1分鐘以上5分鐘以下非直播的影片urls
+
+------------------------------
